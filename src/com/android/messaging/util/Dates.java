@@ -131,8 +131,6 @@ public class Dates {
 
         if (!minPeriodToday && timeDiff < DateUtils.MINUTE_IN_MILLIS) {
             return getLessThanAMinuteOldTimeString(abbreviated);
-        } else if (!minPeriodToday && timeDiff < DateUtils.HOUR_IN_MILLIS) {
-            return getLessThanAnHourOldTimeString(timeDiff, flags);
         } else if (timeDiff < DateUtils.YEAR_IN_MILLIS) {
             return getThisYearTimestamp(time, locale, abbreviated, flags);
         } else {
