@@ -133,10 +133,6 @@ public class Dates {
             return getLessThanAMinuteOldTimeString(abbreviated);
         } else if (!minPeriodToday && timeDiff < DateUtils.HOUR_IN_MILLIS) {
             return getLessThanAnHourOldTimeString(timeDiff, flags);
-        } else if (getNumberOfDaysPassed(time, now) == 0) {
-            return getTodayTimeStamp(time, flags);
-        } else if (timeDiff < DateUtils.WEEK_IN_MILLIS) {
-            return getThisWeekTimestamp(time, locale, abbreviated, flags);
         } else if (timeDiff < DateUtils.YEAR_IN_MILLIS) {
             return getThisYearTimestamp(time, locale, abbreviated, flags);
         } else {
